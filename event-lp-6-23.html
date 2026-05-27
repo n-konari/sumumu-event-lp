@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マンションツアー 6/23｜すむむ。リアルイベント</title>
+<meta name="description" content="琵琶湖南東エリアのおすすめマンション2棟を巡る少人数限定の比較体験ツアー。6月23日（火）開催。ホテルランチ＋先輩交流付き。抽選5名限定。参加無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+/* ─── Design Tokens ─────────────────────────── */
+:root {
+  --red:#E83535; --red-h:#C92C2C; --red-pale:#FDE8E8;
+  --bg:#F8F5EF; --bg-warm:#EAE6D8; --footer-bg:#1C0800;
+  --black:#1A1A1A; --gray-mid:#6B6560; --gray-pale:#CDD3DA;
+  --white:#FFFFFF; --border:rgba(26,26,26,.1);
+  --display:'Bebas Neue',sans-serif;
+  --body:'Noto Sans JP','Hiragino Sans',sans-serif;
+  --r-card:16px; --r-pill:999px;
+}
+
+/* ─── Reset ─────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:14px;line-height:1.8;color:var(--black);background:var(--bg);padding-bottom:72px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ─── Utilities ─────────────────────────────── */
+.container{max-width:1200px;margin:0 auto;padding:0 48px}
+.section-head{display:flex;align-items:baseline;gap:24px;margin-bottom:60px}
+.en-ttl{font-family:var(--display);font-size:clamp(64px,9vw,124px);line-height:.88;letter-spacing:-.02em;color:var(--black)}
+.ja-ttl{font-size:15px;font-weight:500;color:var(--black);white-space:nowrap}
+.rule-line{height:1px;background:var(--black);flex:1;margin-bottom:12px;opacity:.25}
+.fade{opacity:0;transform:translateY(28px);transition:opacity .65s,transform .65s}
+.fade.visible{opacity:1;transform:none}
+
+/* ─── Button ─────────────────────────────────── */
+.btn-arrow{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;color:var(--black);cursor:pointer;background:none;border:none;transition:gap .2s}
+.btn-arrow:hover{gap:18px}
+.btn-arrow .circle{width:40px;height:40px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s}
+.btn-arrow:hover .circle{transform:scale(1.1)}
+.btn-arrow .circle svg{width:14px;height:14px;fill:none;stroke:#fff;stroke-width:2.5}
+.btn-arrow-lg{font-size:17px;gap:16px}
+.btn-arrow-lg .circle{width:54px;height:54px}
+.btn-arrow-lg .circle svg{width:20px;height:20px}
+.btn-arrow-hero{display:inline-flex;align-items:center;gap:0;background:var(--red);color:#fff;font-weight:700;font-size:18px;border-radius:var(--r-pill);padding:0 12px 0 0;cursor:pointer;border:none;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 8px 28px rgba(232,53,53,.45)}
+.btn-arrow-hero:hover{background:var(--red-h);transform:translateY(-2px);box-shadow:0 14px 36px rgba(232,53,53,.55);gap:0}
+.btn-arrow-hero .circle{width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s;margin-right:20px}
+.btn-arrow-hero:hover .circle{background:rgba(0,0,0,.22)}
+.btn-arrow-hero .circle svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2.5}
+
+/* ─── HEADER ─────────────────────────────────── */
+.site-hd{position:sticky;top:0;z-index:300;background:var(--white);border-bottom:1px solid var(--border)}
+.hd-inner{max-width:1400px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;gap:20px}
+.hd-logo{display:flex;align-items:center;flex-shrink:0}
+.hd-logo svg{height:32px;width:auto}
+.hd-tagline{font-size:11px;color:var(--gray-mid);letter-spacing:.08em;flex:1}
+.hd-nav{display:flex;align-items:center;gap:1px}
+.hd-nav a{font-size:11px;font-weight:500;padding:8px 9px;border-radius:6px;white-space:nowrap;transition:background .15s}
+.hd-nav a:hover{background:var(--bg)}
+.hd-nav a.active{color:var(--red);font-weight:700}
+.hd-nav-apply{background:var(--red)!important;color:#fff!important;padding:8px 18px!important;border-radius:var(--r-pill)!important;font-weight:700!important;transition:background .15s!important}
+.hd-nav-apply:hover{background:var(--red-h)!important}
+.hamb{width:44px;height:44px;border-radius:50%;background:var(--red);display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;border:none;flex-shrink:0;transition:background .15s}
+.hamb:hover{background:var(--red-h)}
+.hamb span{display:block;width:18px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamb.open span:nth-child(2){opacity:0}
+.hamb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ─── MOBILE NAV ─────────────────────────────── */
+.mob-nav{position:fixed;top:64px;right:0;width:100%;max-width:360px;height:calc(100dvh - 64px);background:var(--white);z-index:299;overflow-y:auto;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);border-left:1px solid var(--border)}
+.mob-nav.open{transform:translateX(0)}
+.mob-inner{padding:24px 24px 80px;display:flex;flex-direction:column;gap:2px}
+.mob-link{display:block;padding:15px 4px;font-weight:500;border-bottom:1px solid var(--border)}
+.mob-link.active{color:var(--red);font-weight:700}
+.mob-cta{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#fff;padding:15px;border-radius:10px;font-weight:700;margin-top:24px}
+
+/* ─── FIXED MOBILE CTA ─────────────────────── */
+.fixed-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--white);border-top:1px solid var(--border);padding:12px 20px}
+.fixed-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#fff;padding:14px;border-radius:10px;font-weight:700;font-size:15px}
+
+/* ─── HERO ───────────────────────────────────── */
+.hero{background:var(--bg);overflow:hidden;position:relative;min-height:90vh;display:flex;align-items:center}
+.hero-bg-shape{position:absolute;top:0;right:0;width:52%;height:100%;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%);overflow:hidden}
+.hero-bg-shape img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease;display:block}
+.hero-bg-shape img.active{opacity:1}
+.hero-bg-shape .hero-slide-dots{position:absolute;bottom:24px;right:28px;display:flex;gap:8px;z-index:2}
+.hero-bg-shape .hero-slide-dots span{width:28px;height:3px;border-radius:2px;background:rgba(255,255,255,.4);transition:background .5s}
+.hero-bg-shape .hero-slide-dots span.active{background:#fff}
+.hero-bg-shape .hero-slide-label{position:absolute;bottom:52px;right:20px;background:rgba(26,26,26,.68);backdrop-filter:blur(8px);color:#fff;font-size:11px;font-weight:500;padding:6px 12px;border-radius:6px;display:flex;align-items:center;gap:6px;z-index:2}
+.hero-bg-shape .hero-slide-label .slide-dot{width:5px;height:5px;border-radius:50%;background:var(--red);flex-shrink:0}
+.hero-inner{position:relative;z-index:1;max-width:1440px;margin:0 auto;padding:110px 48px 90px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.hero-left{display:flex;flex-direction:column;gap:22px}
+.hero-event-badge{display:inline-flex;align-items:stretch;border:2px solid var(--black);border-radius:var(--r-pill);overflow:hidden;width:fit-content}
+.hero-badge-date{background:var(--red);color:#fff;font-family:var(--display);font-size:30px;padding:7px 22px;line-height:1;letter-spacing:.04em}
+.hero-badge-day{padding:7px 18px;font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--black);display:flex;align-items:center}
+h1.hero-mega{font-family:var(--display);font-size:clamp(80px,13vw,168px);line-height:.86;letter-spacing:-.02em;color:var(--black)}
+.hero-sub{font-size:clamp(14px,1.5vw,17px);font-weight:500;line-height:1.65;padding-left:18px;border-left:3px solid var(--red)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);padding:6px 14px;border-radius:var(--r-pill);font-size:12px;font-weight:500}
+.hero-tag-red{background:var(--red-pale);border-color:var(--red);color:var(--red);font-weight:700}
+.hero-note{font-size:12px;color:var(--gray-mid)}
+.hero-right{}
+
+/* ─── OVERVIEW ─────────────────────────────── */
+.overview{padding:104px 0;background:var(--white)}
+.callout-box{background:var(--bg);border:1px solid var(--black);border-radius:var(--r-card);padding:36px 40px;margin-bottom:56px;position:relative;display:flex;gap:28px;align-items:flex-start}
+.callout-box::after{content:'';position:absolute;bottom:-2px;left:32px;width:72px;height:3px;background:var(--red)}
+.callout-icon{flex-shrink:0;margin-top:2px}
+.callout-text h3{font-size:19px;font-weight:700;margin-bottom:10px;line-height:1.45}
+.callout-text p{font-size:14px;color:var(--gray-mid);line-height:1.85}
+.ov-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ov-card{background:var(--bg);border-radius:var(--r-card);padding:34px 26px;display:flex;flex-direction:column;gap:16px;border:1.5px solid transparent;transition:border-color .2s,transform .2s,box-shadow .2s}
+.ov-card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.07)}
+.ov-card-num{font-family:var(--display);font-size:52px;color:var(--red);line-height:1;opacity:.25}
+.ov-card h3{font-size:18px;font-weight:700;line-height:1.4}
+.ov-card p{font-size:13px;color:var(--gray-mid);line-height:1.85}
+
+/* ─── SCHEDULE ─────────────────────────────── */
+.schedule{padding:104px 0;background:var(--bg)}
+.sched-list{display:flex;flex-direction:column}
+.sched-row{display:grid;grid-template-columns:108px 36px 1fr;gap:0 24px;position:relative}
+.sched-row:not(:last-child){padding-bottom:40px}
+.sched-time-col{text-align:right;padding-top:2px}
+.sched-time{font-family:var(--display);font-size:40px;line-height:1;color:var(--black)}
+.sched-time-sub{font-size:10px;color:var(--gray-mid);font-weight:500;letter-spacing:.05em}
+.sched-axis{display:flex;flex-direction:column;align-items:center}
+.sched-dot-red{width:22px;height:22px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:4px;box-shadow:0 0 0 5px rgba(232,53,53,.15)}
+.sched-dot-gray{width:16px;height:16px;border-radius:50%;border:2px solid var(--gray-pale);background:var(--white);flex-shrink:0;margin-top:7px}
+.sched-dot-black{width:22px;height:22px;border-radius:50%;background:var(--black);flex-shrink:0;margin-top:4px;display:flex;align-items:center;justify-content:center}
+.sched-dot-black::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--bg-warm)}
+.sched-connector{flex:1;width:2px;background:var(--gray-pale);margin:6px 0;min-height:20px}
+.sched-connector-red{background:linear-gradient(to bottom,var(--red),var(--gray-pale))}
+.sched-content{padding-bottom:4px}
+.sched-badge{display:inline-flex;align-items:center;padding:3px 13px;border-radius:var(--r-pill);font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:10px}
+.sched-badge-visit{background:var(--red);color:#fff}
+.sched-badge-move{background:var(--bg-warm);color:var(--black)}
+.sched-badge-lunch{background:var(--black);color:#fff}
+.sched-title{font-size:22px;font-weight:700;margin-bottom:6px;line-height:1.35}
+.sched-desc{font-size:13px;color:var(--gray-mid);line-height:1.8;margin-bottom:10px}
+.sched-tags{display:flex;gap:8px;flex-wrap:wrap}
+.sched-tag{background:var(--white);border:1px solid var(--border);padding:3px 12px;border-radius:var(--r-pill);font-size:11px;font-weight:500}
+
+/* ─── PROPERTIES ───────────────────────────── */
+.properties{padding:104px 0;background:var(--white)}
+.props-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.prop-card{border-radius:var(--r-card);overflow:hidden;border:1px solid var(--border);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.prop-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(0,0,0,.1)}
+.prop-head{background:var(--black);color:#fff;padding:32px 30px;position:relative;overflow:hidden}
+.prop-head::before{content:attr(data-n);position:absolute;right:-12px;top:-20px;font-family:var(--display);font-size:150px;color:rgba(255,255,255,.05);line-height:1;pointer-events:none}
+.prop-time{font-family:var(--display);font-size:18px;color:var(--red);margin-bottom:10px;letter-spacing:.06em}
+.prop-name{font-size:clamp(18px,2vw,24px);font-weight:700;line-height:1.3;margin-bottom:4px;white-space:nowrap}
+.prop-name-en{font-family:var(--display);font-size:12px;letter-spacing:.14em;color:rgba(255,255,255,.4);text-transform:uppercase}
+.prop-illust{height:320px;background:var(--bg-warm);overflow:hidden}
+.prop-illust img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.prop-card:hover .prop-illust img{transform:scale(1.03)}
+.prop-body{padding:28px 30px;background:var(--bg);display:flex;flex-direction:column;gap:12px;flex:1}
+.prop-row{display:flex;gap:14px;font-size:13px;align-items:flex-start}
+.prop-row-lbl{color:var(--gray-mid);font-weight:500;white-space:nowrap;min-width:52px}
+.prop-row-val{font-weight:600;color:var(--black)}
+
+/* ─── EXPERIENCE ─────────────────────────── */
+.experience{padding:104px 0;background:var(--bg-warm);position:relative;overflow:hidden}
+.exp-watermark{position:absolute;bottom:-60px;right:-50px;font-family:var(--display);font-size:240px;color:rgba(0,0,0,.03);line-height:1;pointer-events:none;white-space:nowrap}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
+.exp-card{background:var(--white);border-radius:var(--r-card);padding:38px 30px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}
+.exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--red)}
+.exp-card-bg-num{position:absolute;top:8px;right:14px;font-family:var(--display);font-size:88px;color:rgba(232,53,53,.07);line-height:1;pointer-events:none}
+.exp-card h3{font-size:18px;font-weight:700;line-height:1.4}
+.exp-card p{font-size:13px;color:var(--gray-mid);line-height:1.85}
+
+/* ─── FOR YOU ───────────────────────────────── */
+.foryou{padding:104px 0;background:var(--white)}
+.foryou-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.foryou-card{display:flex;gap:20px;align-items:flex-start;background:var(--bg);border-radius:var(--r-card);padding:28px 26px;border:1.5px solid transparent;transition:border-color .2s}
+.foryou-card:hover{border-color:var(--red)}
+.foryou-avatar{width:64px;height:64px;flex-shrink:0}
+.foryou-content h3{font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.4}
+.foryou-content p{font-size:13px;color:var(--gray-mid);line-height:1.85}
+.foryou-ok-row{display:flex;gap:16px;margin-top:48px;justify-content:center;flex-wrap:wrap}
+.ok-pill{display:flex;align-items:center;gap:12px;background:var(--red-pale);border:2px solid var(--red);border-radius:var(--r-pill);padding:16px 32px;font-size:16px;font-weight:700;color:var(--red)}
+
+/* ─── GALLERY ───────────────────────────────── */
+.gallery{padding:104px 0;background:var(--bg)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-main{grid-column:auto;border-radius:var(--r-card);overflow:hidden;background:var(--bg-warm);aspect-ratio:4/3;position:relative}
+.gallery-main img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery-sub{border-radius:var(--r-card);overflow:hidden;background:var(--bg-warm);aspect-ratio:4/3;position:relative}
+.gallery-sub img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,26,26,.7));color:#fff;padding:16px 20px 14px;font-size:12px;font-weight:500}
+.gallery-note{margin-top:16px;font-size:12px;color:var(--gray-mid);text-align:center}
+
+/* ─── DETAILS ───────────────────────────────── */
+.details{padding:104px 0;background:var(--white)}
+.details-tbl{width:100%;border-collapse:collapse}
+.details-tbl tr{border-bottom:1px solid var(--border)}
+.details-tbl tr:first-child{border-top:1px solid var(--border)}
+.details-tbl th{width:180px;padding:22px 0;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--gray-mid);text-align:left;vertical-align:top}
+.details-tbl td{padding:22px 0 22px 20px;font-weight:500;font-size:15px;line-height:1.75;vertical-align:top}
+.details-tbl td strong{font-size:21px;font-weight:700;display:block;margin-bottom:2px}
+.details-tbl td .note{font-size:12px;color:var(--gray-mid);margin-top:3px;display:block}
+
+/* ─── APPLY BAND ─────────────────────────────── */
+.apply-band{background:var(--red);padding:88px 0;position:relative;overflow:hidden}
+.apply-watermark{position:absolute;right:-60px;bottom:-80px;font-family:var(--display);font-size:320px;color:rgba(255,255,255,.06);line-height:1;pointer-events:none}
+.apply-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 48px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.apply-en{font-family:var(--display);font-size:clamp(64px,10vw,120px);color:#fff;line-height:.88;letter-spacing:-.02em}
+.apply-sub{font-size:17px;font-weight:500;color:rgba(255,255,255,.9);line-height:1.7}
+.apply-deadline{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);color:#fff;padding:10px 24px;border-radius:var(--r-pill);font-size:14px;font-weight:500}
+.btn-apply{display:inline-flex;align-items:center;gap:16px;background:#fff;color:var(--red);padding:18px 40px;border-radius:var(--r-pill);font-size:18px;font-weight:700;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 24px rgba(0,0,0,.15)}
+.btn-apply:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(0,0,0,.22)}
+.btn-apply .circ{width:46px;height:46px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.btn-apply .circ svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2.5}
+.apply-note{font-size:12px;color:rgba(255,255,255,.65)}
+
+/* ─── FAQ ───────────────────────────────────── */
+.faq{padding:104px 0;background:var(--bg-warm)}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid rgba(26,26,26,.12)}
+.faq-item:first-child{border-top:1px solid rgba(26,26,26,.12)}
+details summary{list-style:none;display:flex;align-items:flex-start;gap:16px;padding:24px 0;cursor:pointer;font-size:15px;font-weight:700;line-height:1.5}
+details summary::-webkit-details-marker{display:none}
+.faq-q-lbl{font-family:var(--display);font-size:28px;color:var(--red);flex-shrink:0;line-height:1.05;margin-top:1px}
+.faq-q-txt{flex:1}
+.faq-arr{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--gray-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px;transition:transform .2s,border-color .2s}
+.faq-arr svg{width:10px;height:10px;fill:none;stroke:var(--gray-mid);stroke-width:2;transition:stroke .2s}
+details[open] summary .faq-arr{transform:rotate(180deg);border-color:var(--red)}
+details[open] summary .faq-arr svg{stroke:var(--red)}
+.faq-ans{display:flex;gap:16px;padding:0 0 28px}
+.faq-a-lbl{font-family:var(--display);font-size:28px;color:var(--black);flex-shrink:0;line-height:1.05;margin-top:1px}
+.faq-ans p{font-size:14px;color:var(--gray-mid);line-height:1.88}
+
+/* ─── FOOTER ─────────────────────────────────── */
+.footer{background:var(--footer-bg);color:rgba(255,255,255,.6)}
+.footer-inner{max-width:1200px;margin:0 auto;padding:60px 48px 40px}
+.footer-top{display:flex;align-items:center;gap:32px;padding-bottom:32px}
+.footer-logo{flex-shrink:0}
+.footer-logo svg{height:28px;width:auto}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.5);line-height:1.85}
+.footer-sns{display:flex;gap:10px;margin-top:18px}
+.footer-sns a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;transition:border-color .15s}
+.footer-sns a:hover{border-color:var(--red)}
+.footer-sns svg{width:16px;height:16px;fill:rgba(255,255,255,.6)}
+.footer-nav-flat{display:flex;flex-wrap:nowrap;gap:0;align-items:center}
+.footer-nav-flat a{display:block;padding:6px 7px;font-size:11px;white-space:nowrap;color:rgba(255,255,255,.6);border-radius:6px;transition:color .15s,background .15s}
+.footer-nav-flat a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.footer-divider{height:1px;background:rgba(255,255,255,.08)}
+.footer-bottom{padding:24px 0 0;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-legal{display:flex;gap:16px;flex-wrap:wrap}
+.footer-legal a{color:rgba(255,255,255,.35);font-size:11px;transition:color .15s}
+.footer-legal a:hover{color:rgba(255,255,255,.7)}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.2);white-space:nowrap}
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media(max-width:1024px){
+  .hd-nav{display:none}
+  .hamb{display:flex;margin-left:auto}
+  .hero-inner{grid-template-columns:1fr;padding:80px 24px 60px}
+  .hero-right{display:none}
+  .ov-cards{grid-template-columns:1fr;gap:14px}
+  .props-grid{grid-template-columns:1fr}
+  .exp-grid{grid-template-columns:1fr;gap:14px}
+  .foryou-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-main,.gallery-sub{aspect-ratio:4/3}
+  .footer-top{flex-wrap:wrap;gap:16px}
+  .footer-nav-flat{flex-wrap:wrap}
+  .fixed-cta{display:block}
+  body{padding-bottom:80px}
+  .container{padding:0 20px}
+  .hero-inner{padding:80px 24px 60px}
+  .apply-inner{padding:0 24px}
+  .footer-inner{padding:48px 24px 32px}
+}
+@media(max-width:640px){
+  .sched-row{grid-template-columns:80px 30px 1fr;gap:0 14px}
+  .sched-time{font-size:28px}
+  .section-head{flex-wrap:wrap;gap:8px}
+  .rule-line{display:none}
+  .foryou-ok-row{flex-direction:column;align-items:stretch}
+  .ok-pill{justify-content:center}
+  .details-tbl th{width:110px;font-size:11px}
+  .details-tbl td{font-size:14px;padding-left:12px}
+  .callout-box{flex-direction:column;gap:16px}
+  .footer-bottom{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ════════════════════════════════════════ -->
+<header class="site-hd">
+  <div class="hd-inner">
+    <a href="#top" class="hd-logo" aria-label="すむむ。">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" height="32" aria-label="すむむ。">
+        <defs><style>.st0mn{fill:#E83535}</style></defs>
+        <g fill="#1A1A1A" fill-rule="evenodd">
+          <path fill-rule="evenodd" d="M354.2,224.4c-12.7,0-23.1-10.3-23.1-23.1s10.3-23.1,23.1-23.1,23.1,10.3,23.1,23.1-10.3,23.1-23.1,23.1ZM354.2,194.8c-3.6,0-6.5,2.9-6.5,6.5s2.9,6.5,6.5,6.5,6.5-2.9,6.5-6.5-2.9-6.5-6.5-6.5Z"/>
+          <path fill-rule="evenodd" d="M38.4,202.3c.6-.1,1.1.6.6,1.1-1,1.1-2.2,2.4-2.8,3.1-3.4,4-3.9,9.9,0,13.8,3.5,3.5,10.3,4,13.8,0,13.1-15.1,13.3-34.5,12.5-53.5-.4-8.3-1-16.7-1.8-25,0-1.1.8-2.1,1.9-2.1h15.3c5.8,0,10.4-5.1,9.6-11-.6-4.9-5-8.5-10-8.5h-16.3c-2.4,0-3.2-.7-3.3-1.6-.6-3.9-.7-7.9-1.8-11.7-1.5-5.5-6.5-8.4-11.6-7.2-6.3,1.5-8,7.2-7.2,12.4.3,2,.6,4,.9,6s-.7,2.1-1.9,2.1H15.7c-4.9,0-9.4,3.6-10,8.5-.7,5.9,3.9,11,9.6,11h23.9c1,0,1.8.7,1.9,1.7.2,2.1.5,4.3.7,6.4s-.8,1.8-1.8,1.6c-2.8-.6-5.7-.8-8.5-.4-9,1.1-17.2,7.1-21,15.3-3.9,8.2-3.2,18.3,1.6,25.9,4.9,7.6,13.8,12.8,22.8,12.5,1.4,0,2.6-.2,3.6-.4h0ZM43.2,180.1c-.7,1.5-2.2,2.7-3.6,3.5-1.6.8-3.4,1.2-5.2,1-2.4-.2-4.8-1.4-6.3-3.4-1.9-2.5-2.2-6.2-.8-9.1,1.3-2.9,4.2-4.7,7.2-5.2,2.7-.4,6.2.2,8,3,1.8,2.7,2.4,7,.8,10.2h-.1Z"/>
+          <path fill-rule="evenodd" d="M182.1,186.5c-4.4-1.2-9.4,1-11.5,6.5-3.1,8.2-9.6,12.7-17.6,10.5s-9.5-17.9-8.4-27.1c2-16.7,3.4-33.4,3.9-50.1,0-.9.7-1.5,1.6-1.5h14c5.1,0,9.7-3.7,10.2-8.7.6-5.8-4-10.7-9.7-10.7h-14.4c-.9,0-1.6-.7-1.6-1.6,0-5.1-.3-10.2-.6-15.4-.7-11.9-19.4-12-18.7,0,.3,5.1.5,10.2.6,15.3,0,.9-.7,1.6-1.6,1.6h-12.3c-5.1,0-9.7,3.7-10.2,8.7-.6,5.8,4,10.7,9.7,10.7h12.8c.9,0,1.6.7,1.6,1.6-.2,6.4-.4,11.5-.9,17.9,0,1.1-.6,2-1.4,2.6-1.5.9-4,.6-7.2.9-4.8.4-8.2,1.4-11.7,3.4-13.3,7.6-18.2,26.7-11.2,40.1,5.4,10.4,17.7,15.7,29,14.1,1.3-.2,2.5.5,3.1,1.6,5.3,9.9,15.2,16.7,27.3,17.2,15.2.7,29.4-11.4,31.6-26.3.7-5-1.2-10-6.5-11.5v.2ZM129.1,179c-.5,2.1-1.5,4-3.2,5.4-3,2.4-7.8,2.2-10.6-.5-2.4-2.3-3.2-6-2.6-9.3.4-2.5,1.5-5,3.4-6.7,3.5-3.2,9.3-3,11.8,1.2,1,1.7,1.5,3.6,1.6,5.6,0,1.4,0,2.9-.4,4.3h0Z"/>
+          <path d="M297.9,146.9c1.8,3.8,3.9,8,7.8,9.6,4,1.6,9.1-.6,10.7-4.6,1.7-4.4-.3-9.2-2-13.6-1.2-3.2-3-6.9-4.7-10.3-1.9-3.6-4.7-8.3-9-9s-8.1,1-9,5.4c-1.3,6.3,2.6,14.8,6.3,22.5h0Z"/>
+          <path fill-rule="evenodd" d="M309.6,187.8c-.3-5.7-4.6-9.6-9.4-9.7-4.9,0-9.3,3.1-9.3,9.7s-1.3,13.5-7.7,16.5c-3.7,1.8-8.9,1.5-12.7,0-12.2-5-10.3-20.9-10.5-32.3l-.8-59.3c0-1.1.8-1.9,1.9-1.9h10.8c5.1,0,9.7-3.7,10.2-8.7.6-5.8-4-10.7-9.7-10.7h-11.6c-1,0-1.9-.8-1.9-1.9v-12.9c0-4.9-3.5-9.4-8.4-9.8-5.6-.6-10.3,3.9-10.3,9.3v13.4c0,1-.8,1.9-1.8,1.9h-14.4c-5.1,0-9.7,3.7-10.2,8.7-.6,5.8,4,10.7,9.7,10.7h15.2c1,0,1.9.8,1.9,1.9,0,3.2,0,6.4.1,9.5,0,1.2-1,2.1-2.3,2-5.2-.5-10.6.6-15.1,3-8.4,4.6-14.1,13.5-15.5,23-1.7,11.5,3.1,24,12.6,30.8,5.5,3.9,12.5,5.6,19.2,4.9,1.1-.1,2.1.7,2.2,1.8.2,2.1.4,4.1.8,6.2,2.9,17.5,18.3,31.8,36.6,30.4,19.1-1.5,31.5-18,30.3-36.5h.1ZM235.5,165.8c-3.7.2-7.1-1.6-8.7-4.9-1.6-3.3-1.5-7.3-.2-10.8,1-2.7,3.3-5.2,5.9-6.2,3-1.2,6.9-.7,9.4,2,2.9,3.1,3.7,8.3,2.6,12.6-1.4,5.2-5.4,7.1-8.9,7.3h-.1Z"/>
+          <path d="M173.7,158.5s-4.3-8.8-2-14.8c1.1-2.8,3.6-4.5,6.3-4.8,3.4-.4,6.4.7,8.9,4.1,3.9,5.4,8.8,16.2,6.8,23-.9,3-2.7,5.2-5.6,5.9-3.4.9-6.8-.3-9-2.9-2.1-2.3-4.4-8.2-5.4-10.6h0Z"/>
+        </g>
+        <g fill="#1A1A1A">
+          <path d="M22.5,9.9c-1.2,2.9-2.6,6-4.3,8.9v32.2h-5.2v-24.3c-1.2,1.6-2.5,3-3.8,4.3-.5-1.3-1.9-4.3-2.9-5.6,4.4-4.1,8.6-10.7,11.1-17.2l5.1,1.7ZM50.3,44.5v5.2h-29.7v-5.2h12.2v-9.2h-9.7v-5.2h9.7v-8h-11.2v-5.2h13.1c-2.3-1.7-5.2-3.7-7.7-5.1l3.6-3.9c3.4,1.8,8.1,4.6,10.4,6.7l-2,2.3h10.5v5.2h-11.2v8h9.9v5.2h-9.9v9.2h11.9Z"/>
+          <path d="M69.2,12.5c2.6,0,7.5-.2,9.7-.4,1.1,0,2.3-.3,3.1-.6l3.7,2.9c-.6.7-1.2,1.3-1.6,1.9-1.2,2-2.9,6-4.6,9.9,3.6.6,7,1.7,10,2.9,0-.6,0-1.1.1-1.6.1-1.8.1-3.6,0-5l6,.7c-.2,3.1-.4,5.9-.9,8.5,1.9,1.1,3.6,2.2,4.9,3.1l-2.7,6.4c-1.2-1.1-2.5-2.2-4-3.2-2,5.2-5.5,9.2-11.7,12.5l-4.9-4c6.9-3,10.2-7.4,11.7-11.5-3.3-1.8-6.9-3.2-10.9-3.7-1.7,3.9-3.6,8.5-5.2,11-1.8,2.8-4,4-7.2,4s-7.1-2.8-7.1-7.5c0-7.1,6.5-12.6,15.7-13,1.3-3,2.6-6.2,3.7-8.3-1.8,0-5.8.2-7.9.4-.9,0-2.5.2-3.7.4l-.2-5.9c1.2.1,2.8.2,3.8.2ZM65.1,40.2c.9,0,1.6-.5,2.4-1.6,1.2-1.7,2.4-4.6,3.7-7.5-5.2.8-8.1,3.9-8.1,6.8s.9,2.3,1.9,2.3Z"/>
+          <path d="M141.7,22.8c1.9,2.6,4.5,4.8,7.6,6-1.2,1-2.7,2.9-3.5,4.1-3.5-1.7-6.3-4.7-8.3-8.2-1.4,2.3-3.5,4.6-6.7,6.4h11.9v19.8h-5.6v-1.3h-19.9v1.5h-5.3v-19.5c-.8.6-1.7,1.1-2.5,1.6-.7-1.1-2.4-2.8-3.6-3.7,3.9-1.9,6.2-4.3,7.4-6.7h-6.4v-4.3h7.8c.1-.9.2-1.8.2-2.6h-6.5v-4.1h6.5v-3.6h5.2v3.6h5.5v4.1h-5.5c0,.9,0,1.7-.2,2.6h6.3v4.3h-6.1c2,1.5,4.4,3.2,5.7,4.3l-3.5,3.7c-1.2-1.1-3.2-2.9-5.2-4.4-1.1,1.7-2.5,3.3-4.5,4.7h16c-.8-1.1-1.9-2.3-2.9-2.9,3.7-1.4,5.8-3.3,7-5.4h-5.2v-4.3h6.8c.1-.9.2-1.7.2-2.5h0c0-.1-6.3-.1-6.3-.1v-4.1h6.3v-3.6h5.2v3.6h6.9v4.1h-6.9v.2c0,.8,0,1.6-.1,2.4h8.6v4.3h-6.4ZM137.2,35.7h-19.9v2.6h19.9v-2.6ZM137.2,45.1v-2.9h-19.9v2.9h19.9Z"/>
+          <path d="M183.8,26.7c-2.1,1.8-6.4,5.8-7.5,6.9.4,0,1.2.1,1.7.3,1.3.4,2.2,1.4,2.8,3.1.4,1.2.9,3,1.3,4.2.4,1.4,1.4,2.2,3.2,2.2,3.5,0,6.7-.4,9-.8l-.4,6c-1.9.4-6.6.7-9,.7-4.4,0-6.7-1-7.9-4-.5-1.4-1-3.5-1.3-4.7-.5-1.6-1.5-2.2-2.4-2.2s-1.9.7-3,1.8c-1.6,1.6-5,5.4-8.2,9.4l-5.4-3.8c.8-.7,1.9-1.7,3.2-2.9,2.3-2.4,11.8-11.8,16-16.2-3.2,0-8.7.6-11.4.8-1.6.1-3,.4-4,.5l-.6-6.3c1.1,0,2.7.2,4.4.1,2.2,0,12.6-.5,16.4-1,.9,0,2.1-.3,2.6-.5l3.4,3.8c-1.2.8-2.2,1.7-3,2.3ZM185.2,12l-.7,5.4c-4.8-.4-13.4-1.4-18.9-2.3l.9-5.3c5.2,1,14,1.9,18.8,2.3Z"/>
+          <path d="M219.5,16.3c2.3-.4,4.4-.9,6.2-1.5l.2,5.3c-2.1.6-5,1.2-8.1,1.6-2.2,6.4-6.1,14.5-9.8,19.7l-5.6-2.9c3.6-4.5,7.4-11.3,9.4-16.2-.8,0-1.6,0-2.4,0-1.9,0-3.8,0-5.8-.2l-.4-5.3c2,.2,4.4.3,6.1.3s2.8,0,4.2-.2c.6-2.5,1.2-5.3,1.2-7.7l6.3.6c-.4,1.5-1,3.8-1.7,6.3ZM232,30.2c0,1.3.2,3.5.3,5.8,4,1.5,7.2,3.8,9.5,5.9l-3.1,4.9c-1.6-1.5-3.7-3.4-6.2-4.9v.5c0,4.3-2.3,7.6-8.9,7.6s-10.2-2.5-10.2-7.6,3.8-8,10.2-8,2.1,0,3.2.2c-.2-3.4-.4-7.5-.5-10.3h5.8c-.1,1.9,0,3.9,0,5.9ZM222.8,44.7c3.2,0,4.1-1.7,4.1-4.3v-.9c-1.2-.3-2.4-.5-3.7-.5-2.7,0-4.4,1.2-4.4,2.8s1.4,2.9,4,2.9ZM228.8,20.3l2.9-4.6c3.3,1.4,9,4.6,11.4,6.3l-3.3,4.8c-2.7-2.1-7.9-5.1-11-6.5Z"/>
+          <path d="M260,30.1c4.2-3,8.7-4.4,13.6-4.4,8.1,0,12.7,5,12.7,10.5,0,8.4-6.6,14.8-25.8,13.2l-1.7-6c13.8,1.9,21.1-1.5,21.1-7.3s-2.9-5.2-6.9-5.2-9.9,1.9-12.8,5.4c-.8,1-1.3,1.7-1.7,2.7l-5.3-1.3c.9-4.5,2-13.5,2.3-19.2l6.2.9c-.6,2.5-1.4,8.1-1.7,10.8ZM279.8,13.6l-1.4,5.6c-4.6-.6-14.9-2.8-18.5-3.7l1.5-5.5c4.4,1.4,14.4,3.1,18.4,3.6Z"/>
+        </g>
+        <path class="st0mn" d="M390.4,68.9c-6.7-14.7-21.5-23.2-36.3-23.3-14.8,0-29.6,8.6-36.3,23.3-6,13.2-4.4,29.1,1.9,42.1,4.3,8.9,10.5,16.6,16.1,24.7,5.1,7.3,11.6,15.1,16.1,23.1.9,1.6,3.3,1.6,4.2,0,4.5-8,11.1-15.8,16.1-23.1,5.6-8.1,11.8-15.8,16.1-24.7,6.3-13.1,7.9-28.9,1.9-42.1h.2ZM354.2,106c-10.8,0-19.5-8.7-19.5-19.5s8.7-19.5,19.5-19.5,19.5,8.7,19.5,19.5-8.7,19.5-19.5,19.5Z"/>
+      </svg>
+    </a>
+    <span class="hd-tagline">すべての人に、理想の住み替えを。</span>
+    <nav class="hd-nav">
+      <a href="#top">トップ</a>
+      <a href="#overview">イベント概要</a>
+      <a href="#schedule">スケジュール</a>
+      <a href="#properties">見学物件</a>
+      <a href="#experience">体験できること</a>
+      <a href="#foryou">こんな方に</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#details">参加概要</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#apply" class="hd-nav-apply">応募する</a>
+    </nav>
+    <button class="hamb" id="hamb" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-inner">
+    <a href="#top" class="mob-link">トップ</a>
+    <a href="#overview" class="mob-link">イベント概要</a>
+    <a href="#schedule" class="mob-link">スケジュール</a>
+    <a href="#properties" class="mob-link">見学物件</a>
+    <a href="#experience" class="mob-link">体験できること</a>
+    <a href="#foryou" class="mob-link">こんな方に</a>
+    <a href="#gallery" class="mob-link">ギャラリー</a>
+    <a href="#details" class="mob-link">参加概要</a>
+    <a href="#faq" class="mob-link">よくある質問</a>
+    <a href="#apply" class="mob-cta">応募する（無料）</a>
+  </div>
+</div>
+
+<!-- Fixed Mobile CTA -->
+<div class="fixed-cta" id="fixedCta">
+  <a href="#apply">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4,9 14,9"/><polyline points="9,4 14,9 9,14"/></svg>
+    マンションツアーに応募する（参加無料）
+  </a>
+</div>
+
+<!-- ══ HERO ════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="hero-bg-shape" id="heroSlideshow">
+    <img src="../assets/images/prop-chalier-zeze.jpg" alt="シャリエ大津膳所" class="active">
+    <img src="../assets/images/prop-cielia-nionohama.jpg" alt="シエリアシティ大津におの浜">
+    <div class="hero-slide-dots">
+      <span class="active"></span>
+      <span></span>
+    </div>
+    <div class="hero-slide-label">
+      <span class="slide-dot"></span>
+      <span id="heroSlideName">シャリエ大津膳所</span>
+    </div>
+  </div>
+  <div class="hero-inner">
+
+    <div class="hero-left fade">
+      <div class="hero-event-badge">
+        <span class="hero-badge-date">6.23</span>
+        <span class="hero-badge-day">TUE &nbsp; 2026</span>
+      </div>
+      <h1 class="hero-mega">MANSION<br>TOUR</h1>
+      <p class="hero-sub">琵琶湖南東エリアのおすすめ物件を巡る<br>少人数限定の比較体験ツアー</p>
+      <div class="hero-tags">
+        <span class="hero-tag hero-tag-red">抽選・少数限定 5名</span>
+        <span class="hero-tag">2棟を同日見学</span>
+        <span class="hero-tag">ホテルランチ付き</span>
+        <span class="hero-tag">お子様連れOK</span>
+        <span class="hero-tag">おひとり様OK</span>
+      </div>
+      <a href="#apply" class="btn-arrow-hero">
+        <span class="circle">
+          <svg viewBox="0 0 14 14"><polyline points="3,7 11,7"/><polyline points="7,3 11,7 7,11"/></svg>
+        </span>
+        マンションツアーに応募する（参加無料）
+      </a>
+      <p class="hero-note">※ 抽選制。当選者のみご参加いただけます</p>
+    </div>
+
+    <div class="hero-right"></div>
+
+  </div>
+</section>
+
+<!-- ══ OVERVIEW ══════════════════════════════════════ -->
+<section class="overview" id="overview">
+  <div class="container">
+    <div class="section-head fade">
+      <span class="en-ttl">OVERVIEW</span>
+      <span class="ja-ttl">イベント概要</span>
+      <div class="rule-line"></div>
+    </div>
+
+    <div class="callout-box fade">
+      <div class="callout-icon">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <path d="M22 4C14.3 4 8 10.3 8 18C8 23.5 11.2 28.2 16 30.8V35H28V30.8C32.8 28.2 36 23.5 36 18C36 10.3 29.7 4 22 4Z" stroke="#1A1A1A" stroke-width="1.8" stroke-linejoin="round"/>
+          <line x1="16" y1="37.5" x2="28" y2="37.5" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="18.5" y1="40.5" x2="25.5" y2="40.5" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M22 12 L19 18 L22 18 L19 24" stroke="#E83535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="callout-text">
+        <h3>単なる「物件見学」ではありません。</h3>
+        <p>エリアを訪れ、物件を比べ、先輩の本音を聞く。すむむ。の体験型リアルイベントです。購入を検討している方にとって、1日でこれだけの体験ができる機会はほとんどありません。</p>
+      </div>
+    </div>
+
+    <div class="ov-cards">
+      <div class="ov-card fade" style="transition-delay:.05s">
+        <div class="ov-card-num">01</div>
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <rect x="12" y="17" width="28" height="29" rx="2" stroke="#1A1A1A" stroke-width="1.8"/>
+          <line x1="10" y1="17" x2="42" y2="17" stroke="#E83535" stroke-width="3" stroke-linecap="round"/>
+          <rect x="15" y="22" width="6" height="5" rx="1" stroke="#1A1A1A" stroke-width="1.2"/>
+          <rect x="23" y="22" width="6" height="5" rx="1" stroke="#E83535" stroke-width="1.2"/>
+          <rect x="31" y="22" width="6" height="5" rx="1" stroke="#1A1A1A" stroke-width="1.2"/>
+          <rect x="15" y="31" width="6" height="5" rx="1" stroke="#1A1A1A" stroke-width="1.2"/>
+          <rect x="23" y="31" width="6" height="5" rx="1" stroke="#1A1A1A" stroke-width="1.2"/>
+          <rect x="31" y="31" width="6" height="5" rx="1" stroke="#E83535" stroke-width="1.2"/>
+          <rect x="20" y="38" width="12" height="8" rx="1" stroke="#1A1A1A" stroke-width="1.5"/>
+        </svg>
+        <h3>マンションを実際に見学</h3>
+        <p>共有部からモデルルームまで複数部屋を見学。住まいのイメージが格段に具体化します。プロのスタッフが各ポイントをわかりやすくご案内します。</p>
+      </div>
+      <div class="ov-card fade" style="transition-delay:.1s">
+        <div class="ov-card-num">02</div>
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <path d="M26 5C18.3 5 12 11.3 12 19C12 29.5 26 47 26 47C26 47 40 29.5 40 19C40 11.3 33.7 5 26 5Z" stroke="#1A1A1A" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="26" cy="19" r="6" fill="#E83535"/>
+          <circle cx="26" cy="19" r="2.5" fill="white"/>
+        </svg>
+        <h3>琵琶湖南東エリアの住み心地を体感</h3>
+        <p>物件周辺の雰囲気・利便性を自分の足で確かめましょう。スーパー、公園、学校の位置など、暮らしのリアルが見えてきます。</p>
+      </div>
+      <div class="ov-card fade" style="transition-delay:.15s">
+        <div class="ov-card-num">03</div>
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <line x1="19" y1="8" x2="19" y2="44" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+          <line x1="15" y1="8" x2="15" y2="19" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="23" y1="8" x2="23" y2="19" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M15 19 Q19 25 23 19" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+          <line x1="33" y1="8" x2="33" y2="44" stroke="#E83535" stroke-width="2" stroke-linecap="round"/>
+          <path d="M33 8 L37 15 L37 23 L33 23" stroke="#E83535" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <h3>ホテルランチで先輩と本音トーク</h3>
+        <p>びわ湖を望むホテルでのランチ交流会。実際にマンションを購入した先輩の体験談をリラックスした雰囲気で聞けます。営業トークなしの本音の場です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCHEDULE ══════════════════════════════════════ -->
+<section class="schedule" id="schedule">
+  <div class="container">
+    <div class="section-head fade">
+      <span class="en-ttl">SCHEDULE</span>
+      <span class="ja-ttl">当日のスケジュール</span>
+      <div class="rule-line"></div>
+    </div>
+
+    <div class="sched-list">
+
+      <!-- 10:00 -->
+      <div class="sched-row fade">
+        <div class="sched-time-col">
+          <div class="sched-time">10:00</div>
+          <div class="sched-time-sub">10:00〜11:00</div>
+        </div>
+        <div class="sched-axis">
+          <div class="sched-dot-red"></div>
+          <div class="sched-connector sched-connector-red"></div>
+        </div>
+        <div class="sched-content">
+          <span class="sched-badge sched-badge-visit">VISIT 01</span>
+          <div class="sched-title">シャリエ大津膳所</div>
+          <p class="sched-desc">最初の見学地。共有部・ラウンジ・駐車場などの共用施設をスタッフとともに見学後、複数のモデルルームへ。間取りや設備の細部もじっくり確認できます。</p>
+          <div class="sched-tags">
+            <span class="sched-tag">共有部見学</span>
+            <span class="sched-tag">モデルルーム複数見学</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11:00 -->
+      <div class="sched-row fade" style="transition-delay:.06s">
+        <div class="sched-time-col">
+          <div class="sched-time">11:00</div>
+          <div class="sched-time-sub">移動</div>
+        </div>
+        <div class="sched-axis">
+          <div class="sched-dot-gray"></div>
+          <div class="sched-connector"></div>
+        </div>
+        <div class="sched-content">
+          <span class="sched-badge sched-badge-move">MOVE</span>
+          <div class="sched-title">エリア移動</div>
+          <p class="sched-desc">物件周辺のエリアを移動しながら、街の雰囲気・駅までの距離感・周辺施設を体で感じます。</p>
+        </div>
+      </div>
+
+      <!-- 11:30 -->
+      <div class="sched-row fade" style="transition-delay:.12s">
+        <div class="sched-time-col">
+          <div class="sched-time">11:30</div>
+          <div class="sched-time-sub">11:30〜12:30</div>
+        </div>
+        <div class="sched-axis">
+          <div class="sched-dot-red"></div>
+          <div class="sched-connector sched-connector-red"></div>
+        </div>
+        <div class="sched-content">
+          <span class="sched-badge sched-badge-visit">VISIT 02</span>
+          <div class="sched-title">シエリアシティ大津におの浜</div>
+          <p class="sched-desc">2棟目の見学地。1棟目との違いをリアルに比較しながら見学できるのが、このツアー最大のポイント。自分の中の優先順位が明確になります。</p>
+          <div class="sched-tags">
+            <span class="sched-tag">共有部見学</span>
+            <span class="sched-tag">モデルルーム複数見学</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12:30 -->
+      <div class="sched-row fade" style="transition-delay:.18s">
+        <div class="sched-time-col">
+          <div class="sched-time">12:30</div>
+          <div class="sched-time-sub">移動</div>
+        </div>
+        <div class="sched-axis">
+          <div class="sched-dot-gray"></div>
+          <div class="sched-connector"></div>
+        </div>
+        <div class="sched-content">
+          <span class="sched-badge sched-badge-move">MOVE</span>
+          <div class="sched-title">会場へ移動</div>
+          <p class="sched-desc">びわ湖大津プリンスホテルへ移動。湖畔の景色とともに、午前中の見学を振り返りながら向かいます。</p>
+        </div>
+      </div>
+
+      <!-- 13:00 -->
+      <div class="sched-row fade" style="transition-delay:.24s">
+        <div class="sched-time-col">
+          <div class="sched-time">13:00</div>
+          <div class="sched-time-sub">〜15:00頃</div>
+        </div>
+        <div class="sched-axis">
+          <div class="sched-dot-black"></div>
+        </div>
+        <div class="sched-content">
+          <span class="sched-badge sched-badge-lunch">LUNCH &amp; TALK</span>
+          <div class="sched-title">びわ湖大津プリンスホテル ランチ＆交流会</div>
+          <p class="sched-desc">びわ湖を望む会場で昼食をとりながら、参加者同士・購入経験者（先輩）との情報交換。資料では分からない「住んでみてどうだった？」を本人から直接聞ける、貴重な場です。</p>
+          <div class="sched-tags">
+            <span class="sched-tag">先輩との交流</span>
+            <span class="sched-tag">情報交換</span>
+            <span class="sched-tag">昼食付き（無料）</span>
+            <span class="sched-tag">個別相談</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROPERTIES ════════════════════════════════════ -->
+<section class="properties" id="properties">
+  <div class="container">
+    <div class="section-head fade">
+      <span class="en-ttl">PROPERTIES</span>
+      <span class="ja-ttl">見学物件</span>
+      <div class="rule-line"></div>
+    </div>
+
+    <div class="props-grid">
+
+      <!-- Card 1 -->
+      <div class="prop-card fade" style="transition-delay:.05s">
+        <div class="prop-head" data-n="01">
+          <div class="prop-time">10:00〜11:00</div>
+          <div class="prop-name">シャリエ大津膳所</div>
+          <div class="prop-name-en">Charie Otsu Zeze</div>
+        </div>
+        <div class="prop-illust">
+          <img src="../assets/images/prop-chalier-zeze.jpg" alt="シャリエ大津膳所">
+        </div>
+        <div class="prop-body">
+          <div class="prop-row">
+            <span class="prop-row-lbl">住所</span>
+            <span class="prop-row-val">滋賀県大津市相模町8番2</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">交通</span>
+            <span class="prop-row-val">JR「膳所」駅 徒歩7分 / 京阪「京阪膳所」駅 徒歩7分 / 京阪「錦」駅 徒歩4分</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">竣工年月</span>
+            <span class="prop-row-val">2025年2月</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">構造・階数</span>
+            <span class="prop-row-val">鉄筋コンクリート造・地上10階建</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">専有面積</span>
+            <span class="prop-row-val">66.12㎡〜77.72㎡</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">総戸数</span>
+            <span class="prop-row-val">186戸</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">間取り</span>
+            <span class="prop-row-val">1LDK+2S(納戸)〜4LDK</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">見学内容</span>
+            <span class="prop-row-val">共有部見学・モデルルーム複数見学</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="prop-card fade" style="transition-delay:.1s">
+        <div class="prop-head" data-n="02">
+          <div class="prop-time">11:30〜12:30</div>
+          <div class="prop-name">シエリアシティ大津におの浜</div>
+          <div class="prop-name-en">Cielia City Otsu Nionomahama</div>
+        </div>
+        <div class="prop-illust">
+          <img src="../assets/images/prop-cielia-nionohama.jpg" alt="シエリアシティ大津におの浜">
+        </div>
+        <div class="prop-body">
+          <div class="prop-row">
+            <span class="prop-row-lbl">住所</span>
+            <span class="prop-row-val">滋賀県大津市におの浜二丁目1-14</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">交通</span>
+            <span class="prop-row-val">JR「膳所」駅 徒歩7分 / 京阪「京阪膳所」駅 徒歩7分</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">竣工年月</span>
+            <span class="prop-row-val">2024年4月</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">構造・階数</span>
+            <span class="prop-row-val">鉄筋コンクリート造・地上15階建</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">専有面積</span>
+            <span class="prop-row-val">68.00㎡〜84.14㎡</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">総戸数</span>
+            <span class="prop-row-val">708戸</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">間取り</span>
+            <span class="prop-row-val">1LDK+2S(納戸)〜3LDK+S(納戸)</span>
+          </div>
+          <div class="prop-row">
+            <span class="prop-row-lbl">見学内容</span>
+            <span class="prop-row-val">共有部見学・モデルルーム複数見学</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCE ════════════════════════════════════ -->
+<section class="experience" id="experience">
+  <div class="exp-watermark">EXPERIENCE</div>
+  <div class="container">
+    <div class="section-head fade">
+      <span class="en-ttl">EXPERIENCE</span>
+      <span class="ja-ttl">この体験ができるのは、ここだけ</span>
+      <div class="rule-line"></div>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card fade" style="transition-delay:.05s">
+        <div class="exp-card-bg-num">01</div>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <polygon points="6,12 18,8 30,12 42,8 42,40 30,36 18,40 6,36" stroke="#1A1A1A" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+          <line x1="18" y1="8" x2="18" y2="40" stroke="#1A1A1A" stroke-width="1.2" opacity=".3"/>
+          <line x1="30" y1="12" x2="30" y2="36" stroke="#1A1A1A" stroke-width="1.2" opacity=".3"/>
+          <path d="M24 14C21 14 18.5 16.5 18.5 19.5C18.5 24 24 30 24 30C24 30 29.5 24 29.5 19.5C29.5 16.5 27 14 24 14Z" stroke="#E83535" stroke-width="1.5" fill="none"/>
+          <circle cx="24" cy="19.5" r="2.5" fill="#E83535"/>
+        </svg>
+        <h3>現地で、エリアの住み心地を体感</h3>
+        <p>実際に物件周辺を訪れ、近くのスーパー・公園・学校の位置なども確認。エリアの「空気感」は現地でしか分かりません。地図やデータでは伝わらないリアルを感じてください。</p>
+      </div>
+      <div class="exp-card fade" style="transition-delay:.1s">
+        <div class="exp-card-bg-num">02</div>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <rect x="4" y="22" width="16" height="22" rx="1.5" stroke="#1A1A1A" stroke-width="1.8"/>
+          <line x1="3" y1="22" x2="21" y2="22" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="6" y="27" width="4" height="3" rx="0.5" stroke="#1A1A1A" stroke-width="1"/>
+          <rect x="12" y="27" width="4" height="3" rx="0.5" stroke="#1A1A1A" stroke-width="1"/>
+          <rect x="6" y="34" width="4" height="3" rx="0.5" stroke="#1A1A1A" stroke-width="1"/>
+          <rect x="12" y="34" width="4" height="3" rx="0.5" stroke="#1A1A1A" stroke-width="1"/>
+          <line x1="24" y1="6" x2="24" y2="44" stroke="#CDD3DA" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <rect x="28" y="14" width="16" height="30" rx="1.5" stroke="#E83535" stroke-width="1.8"/>
+          <line x1="27" y1="14" x2="45" y2="14" stroke="#E83535" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="30" y="19" width="4" height="3" rx="0.5" stroke="#E83535" stroke-width="1"/>
+          <rect x="36" y="19" width="4" height="3" rx="0.5" stroke="#E83535" stroke-width="1"/>
+          <rect x="30" y="26" width="4" height="3" rx="0.5" stroke="#E83535" stroke-width="1"/>
+          <rect x="36" y="26" width="4" height="3" rx="0.5" stroke="#E83535" stroke-width="1"/>
+          <rect x="30" y="33" width="4" height="3" rx="0.5" stroke="#E83535" stroke-width="1"/>
+          <rect x="36" y="33" width="4" height="3" rx="0.5" stroke="#E83535" stroke-width="1"/>
+        </svg>
+        <h3>2棟を同日比較。自分の目で違いを知る</h3>
+        <p>同じ日に2つの物件を見ることで初めてわかる違いがあります。間取り・共有部・周辺環境。比較することで、自分の優先順位が自然と明確になります。</p>
+      </div>
+      <div class="exp-card fade" style="transition-delay:.15s">
+        <div class="exp-card-bg-num">03</div>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <rect x="4" y="6" width="26" height="18" rx="4" stroke="#1A1A1A" stroke-width="1.8"/>
+          <path d="M8 24 L6 30 L18 24" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+          <circle cx="11" cy="15" r="2" fill="#1A1A1A"/>
+          <circle cx="17" cy="15" r="2" fill="#1A1A1A"/>
+          <circle cx="23" cy="15" r="2" fill="#1A1A1A"/>
+          <rect x="18" y="24" width="26" height="18" rx="4" stroke="#E83535" stroke-width="1.8"/>
+          <path d="M40 24 L42 18 L30 24" stroke="#E83535" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+          <circle cx="27" cy="33" r="2" fill="#E83535"/>
+          <circle cx="33" cy="33" r="2" fill="#E83535"/>
+          <circle cx="39" cy="33" r="2" fill="#E83535"/>
+        </svg>
+        <h3>先輩の本音を、営業なしで聞ける</h3>
+        <p>実際にマンションを購入した「先輩」と直接話せる機会は滅多にありません。ランチを囲みながら、本音の体験談を聞いてみてください。購入の後悔も成功も、正直に教えてもらえます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOR YOU ════════════════════════════════════════ -->
+<section class="foryou" id="foryou">
+  <div class="container">
+    <div class="section-head fade">
+      <span class="en-ttl">FOR YOU</span>
+      <span class="ja-ttl">こんな方におすすめ</span>
+      <div class="rule-line"></div>
+    </div>
+    <div class="foryou-grid">
+
+      <div class="foryou-card fade" style="transition-delay:.05s">
+        <svg class="foryou-avatar" viewBox="0 0 64 64" fill="none">
+          <circle cx="26" cy="26" r="17" stroke="#1A1A1A" stroke-width="2"/>
+          <line x1="38" y1="38" x2="54" y2="54" stroke="#E83535" stroke-width="3" stroke-linecap="round"/>
+          <rect x="18" y="21" width="16" height="13" rx="1.5" stroke="#1A1A1A" stroke-width="1.5"/>
+          <line x1="17" y1="21" x2="35" y2="21" stroke="#E83535" stroke-width="2" stroke-linecap="round"/>
+          <rect x="21" y="26" width="4" height="3" rx="0.5" stroke="#1A1A1A" stroke-width="1"/>
+          <rect x="27" y="26" width="4" height="3" rx="0.5" stroke="#1A1A1A" stroke-width="1"/>
+          <rect x="21" y="30" width="10" height="4" rx="0.5" fill="#E83535" opacity=".25"/>
+        </svg>
+        <div class="foryou-content">
+          <h3>はじめての物件見学を考えている方</h3>
+          <p>「何を見ればいいかわからない」——そんな方にこそ。スタッフと一緒に歩くから、見学のポイントが自然に身につきます。知識ゼロでも安心してご参加ください。</p>
+        </div>
+      </div>
+
+      <div class="foryou-card fade" style="transition-delay:.1s">
+        <svg class="foryou-avatar" viewBox="0 0 64 64" fill="none">
+          <line x1="32" y1="10" x2="32" y2="58" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+          <line x1="8" y1="22" x2="56" y2="22" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="32" cy="10" r="4.5" fill="#E83535"/>
+          <line x1="14" y1="22" x2="14" y2="38" stroke="#1A1A1A" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <path d="M8 38 Q14 43 20 38" stroke="#E83535" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <line x1="50" y1="22" x2="50" y2="42" stroke="#1A1A1A" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <path d="M44 42 Q50 47 56 42" stroke="#E83535" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <rect x="9" y="30" width="10" height="8" rx="1" stroke="#1A1A1A" stroke-width="1.5"/>
+          <rect x="45" y="33" width="10" height="9" rx="1" stroke="#E83535" stroke-width="1.5"/>
+        </svg>
+        <div class="foryou-content">
+          <h3>複数の物件を比べてみたい方</h3>
+          <p>1日で2棟を見学できるこのツアーは、比較検討を加速させる絶好の機会。物件選びの判断基準が明確になります。「どちらが自分に合っているか」が体感でわかります。</p>
+        </div>
+      </div>
+
+      <div class="foryou-card fade" style="transition-delay:.15s">
+        <svg class="foryou-avatar" viewBox="0 0 64 64" fill="none">
+          <path d="M32 6C21 6 12 15 12 26C12 40 32 58 32 58C32 58 52 40 52 26C52 15 43 6 32 6Z" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="32" cy="26" r="9" fill="#E83535"/>
+          <circle cx="32" cy="26" r="3.5" fill="white"/>
+        </svg>
+        <div class="foryou-content">
+          <h3>滋賀・大津エリアが気になっている方</h3>
+          <p>エリアの雰囲気は現地で体感するのが一番。駅周辺・湖岸エリアの住み心地を、スタッフとともに感じてみてください。琵琶湖の近くで暮らすイメージが一気に具体化します。</p>
+        </div>
+      </div>
+
+      <div class="foryou-card fade" style="transition-delay:.2s">
+        <svg class="foryou-avatar" viewBox="0 0 64 64" fill="none">
+          <circle cx="20" cy="22" r="9" stroke="#1A1A1A" stroke-width="1.8"/>
+          <path d="M6 46 C6 37 34 37 34 46" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <rect x="30" y="8" width="28" height="20" rx="4" stroke="#E83535" stroke-width="1.8"/>
+          <path d="M34 28 L32 34 L44 28" stroke="#E83535" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+          <line x1="37" y1="16" x2="51" y2="16" stroke="#E83535" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="37" y1="22" x2="49" y2="22" stroke="#E83535" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="foryou-content">
+          <h3>先輩の生の声を聞きたい方</h3>
+          <p>資料では分からない「住んでみてどうだった？」の答えを、購入経験者から直接聞ける貴重な機会です。後悔した点、よかった点、正直に話してもらえます。</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="foryou-ok-row fade">
+      <div class="ok-pill">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="9" r="5" stroke="#E83535" stroke-width="1.8"/>
+          <path d="M5 24 C5 18 23 18 23 24" stroke="#E83535" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <circle cx="8" cy="19" r="4" stroke="#E83535" stroke-width="1.5"/>
+          <path d="M8 15 C8 12 13 12 13 15" stroke="#E83535" stroke-width="1.5" fill="none"/>
+          <circle cx="8" cy="12" r="3" stroke="#E83535" stroke-width="1.5"/>
+        </svg>
+        お子様連れOK
+      </div>
+      <div class="ok-pill">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="9" r="6" stroke="#E83535" stroke-width="1.8"/>
+          <path d="M5 26 C5 19 23 19 23 26" stroke="#E83535" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M20 12 L24 10 M20 9 L24 7" stroke="#E83535" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        おひとり様OK
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY ═══════════════════════════════════════ -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head fade">
+      <span class="en-ttl">GALLERY</span>
+      <span class="ja-ttl">過去のイベントの様子</span>
+      <div class="rule-line"></div>
+    </div>
+    <div class="gallery-grid">
+
+      <!-- Main -->
+      <div class="gallery-main fade">
+        <img src="../assets/images/gallery-01.jpg" alt="ホテルでのランチ&交流会">
+        <div class="gallery-caption">ホテルでのランチ&amp;交流会</div>
+      </div>
+
+      <!-- Sub 1 -->
+      <div class="gallery-sub fade" style="transition-delay:.1s">
+        <img src="../assets/images/gallery-02.jpg" alt="モデルルーム見学中の様子">
+        <div class="gallery-caption">モデルルーム見学中の様子</div>
+      </div>
+
+      <!-- Sub 2 -->
+      <div class="gallery-sub fade" style="transition-delay:.15s">
+        <img src="../assets/images/gallery-03.jpg" alt="ホテルでのランチ&交流会">
+        <div class="gallery-caption">ホテルでのランチ&amp;交流会</div>
+      </div>
+
+    </div>
+    <p class="gallery-note fade">※ 写真は過去のイベント時の様子です</p>
+  </div>
+</section>
+
+<!-- ══ DETAILS ════════════════════════════════════════ -->
+<section class="details" id="details">
+  <div class="container">
+    <div class="section-head fade">
+      <span class="en-ttl">DETAILS</span>
+      <span class="ja-ttl">参加概要</span>
+      <div class="rule-line"></div>
+    </div>
+    <table class="details-tbl fade">
+      <tr>
+        <th>開催日</th>
+        <td><strong>2026年6月23日（火）</strong></td>
+      </tr>
+      <tr>
+        <th>時間</th>
+        <td>
+          <strong>10:00〜15:00頃</strong>
+          <span class="note">※ 解散時間は多少前後する場合がございます</span>
+        </td>
+      </tr>
+      <tr>
+        <th>集合場所</th>
+        <td>
+          「シャリエ大津膳所」モデルルーム前
+          <span class="note">詳細な集合場所は、当選後にメールにてご連絡します</span>
+        </td>
+      </tr>
+      <tr>
+        <th>見学物件</th>
+        <td>
+          ① シャリエ大津膳所<br>
+          ② シエリアシティ大津におの浜
+        </td>
+      </tr>
+      <tr>
+        <th>昼食会場</th>
+        <td>
+          びわ湖大津プリンスホテル
+          <span class="note">ランチ代はすむむ。が負担します</span>
+        </td>
+      </tr>
+      <tr>
+        <th>定員</th>
+        <td>
+          <strong>5名（抽選制）</strong>
+          <span class="note">運営スタッフ3名が同行します</span>
+        </td>
+      </tr>
+      <tr>
+        <th>参加費</th>
+        <td>
+          <strong>無料</strong>
+          <span class="note">現地までの交通費のみ各自ご負担ください</span>
+        </td>
+      </tr>
+      <tr>
+        <th>応募締切</th>
+        <td>
+          <strong>2026年6月13日（金）</strong>
+          <span class="note">締め切り後、3営業日以内に結果をメールにてご連絡します</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- ══ APPLY BAND ════════════════════════════════════ -->
+<section class="apply-band" id="apply">
+  <div class="apply-watermark">APPLY</div>
+  <div class="apply-inner">
+    <div class="apply-en fade">APPLY<br>NOW</div>
+    <p class="apply-sub fade" style="transition-delay:.1s">抽選で5名をご招待。<br>参加費は無料です。</p>
+    <div class="apply-deadline fade" style="transition-delay:.15s">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5"/><polyline points="8,4 8,9 11,11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      応募締切 6月13日（金）
+    </div>
+    <a href="#" class="btn-apply fade" style="transition-delay:.2s">
+      <span class="circ">
+        <svg viewBox="0 0 18 18"><polyline points="4,9 14,9"/><polyline points="9,4 14,9 9,14"/></svg>
+      </span>
+      マンションツアーに応募する（参加無料）
+    </a>
+    <p class="apply-note fade" style="transition-delay:.25s">※ 当選者にのみメールにてご連絡します。営業電話は一切ありません。</p>
+  </div>
+</section>
+
+<!-- ══ FAQ ════════════════════════════════════════════ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head fade">
+      <span class="en-ttl">FAQ</span>
+      <span class="ja-ttl">よくある質問</span>
+      <div class="rule-line"></div>
+    </div>
+    <div class="faq-list fade">
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q-lbl">Q</span>
+            <span class="faq-q-txt">参加費はかかりますか？</span>
+            <span class="faq-arr"><svg viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg></span>
+          </summary>
+          <div class="faq-ans">
+            <span class="faq-a-lbl">A</span>
+            <p>参加費・ランチ代ともに無料です。現地までの交通費のみ各自ご負担ください。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q-lbl">Q</span>
+            <span class="faq-q-txt">お子様連れでも参加できますか？</span>
+            <span class="faq-arr"><svg viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg></span>
+          </summary>
+          <div class="faq-ans">
+            <span class="faq-a-lbl">A</span>
+            <p>はい、お子様連れでも参加いただけます。見学先の物件もファミリー向け設計になっています。ランチ交流会も子育て世代の方が多く参加されますので、安心してご応募ください。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q-lbl">Q</span>
+            <span class="faq-q-txt">おひとりで参加しても大丈夫ですか？</span>
+            <span class="faq-arr"><svg viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg></span>
+          </summary>
+          <div class="faq-ans">
+            <span class="faq-a-lbl">A</span>
+            <p>もちろんです。参加者の多くがおひとりで参加されています。スタッフが和やかな雰囲気づくりをしますので、はじめての方でも気軽にご応募ください。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q-lbl">Q</span>
+            <span class="faq-q-txt">抽選の結果はいつ通知されますか？</span>
+            <span class="faq-arr"><svg viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg></span>
+          </summary>
+          <div class="faq-ans">
+            <span class="faq-a-lbl">A</span>
+            <p>締め切り後、3営業日以内にご応募時のメールアドレスへご連絡します。落選の場合もメールにてお知らせします。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q-lbl">Q</span>
+            <span class="faq-q-txt">ツアー中に購入を迫られますか？</span>
+            <span class="faq-arr"><svg viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg></span>
+          </summary>
+          <div class="faq-ans">
+            <span class="faq-a-lbl">A</span>
+            <p>一切ありません。このツアーは「見て・比べて・感じる」体験の場です。購入を前提とした営業は行いません。見学後の検討は、ご自身のペースで進めていただけます。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>
+            <span class="faq-q-lbl">Q</span>
+            <span class="faq-q-txt">住まい購入の知識がなくても参加できますか？</span>
+            <span class="faq-arr"><svg viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg></span>
+          </summary>
+          <div class="faq-ans">
+            <span class="faq-a-lbl">A</span>
+            <p>はい、むしろ初めての方こそ大歓迎です。スタッフが物件見学のポイントを丁寧にご説明します。先輩の体験談も参考にしていただけます。「まだ検討初期段階」という方も気軽にご応募ください。</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+        <a href="#top" class="footer-logo" aria-label="すむむ。トップへ" style="display:block;text-decoration:none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" height="28" aria-label="すむむ。">
+            <defs><style>.fst0mn{fill:#E83535}</style></defs>
+            <g fill="white" fill-rule="evenodd">
+              <path fill-rule="evenodd" d="M354.2,224.4c-12.7,0-23.1-10.3-23.1-23.1s10.3-23.1,23.1-23.1,23.1,10.3,23.1,23.1-10.3,23.1-23.1,23.1ZM354.2,194.8c-3.6,0-6.5,2.9-6.5,6.5s2.9,6.5,6.5,6.5,6.5-2.9,6.5-6.5-2.9-6.5-6.5-6.5Z"/>
+              <path fill-rule="evenodd" d="M38.4,202.3c.6-.1,1.1.6.6,1.1-1,1.1-2.2,2.4-2.8,3.1-3.4,4-3.9,9.9,0,13.8,3.5,3.5,10.3,4,13.8,0,13.1-15.1,13.3-34.5,12.5-53.5-.4-8.3-1-16.7-1.8-25,0-1.1.8-2.1,1.9-2.1h15.3c5.8,0,10.4-5.1,9.6-11-.6-4.9-5-8.5-10-8.5h-16.3c-2.4,0-3.2-.7-3.3-1.6-.6-3.9-.7-7.9-1.8-11.7-1.5-5.5-6.5-8.4-11.6-7.2-6.3,1.5-8,7.2-7.2,12.4.3,2,.6,4,.9,6s-.7,2.1-1.9,2.1H15.7c-4.9,0-9.4,3.6-10,8.5-.7,5.9,3.9,11,9.6,11h23.9c1,0,1.8.7,1.9,1.7.2,2.1.5,4.3.7,6.4s-.8,1.8-1.8,1.6c-2.8-.6-5.7-.8-8.5-.4-9,1.1-17.2,7.1-21,15.3-3.9,8.2-3.2,18.3,1.6,25.9,4.9,7.6,13.8,12.8,22.8,12.5,1.4,0,2.6-.2,3.6-.4h0ZM43.2,180.1c-.7,1.5-2.2,2.7-3.6,3.5-1.6.8-3.4,1.2-5.2,1-2.4-.2-4.8-1.4-6.3-3.4-1.9-2.5-2.2-6.2-.8-9.1,1.3-2.9,4.2-4.7,7.2-5.2,2.7-.4,6.2.2,8,3,1.8,2.7,2.4,7,.8,10.2h-.1Z"/>
+              <path fill-rule="evenodd" d="M182.1,186.5c-4.4-1.2-9.4,1-11.5,6.5-3.1,8.2-9.6,12.7-17.6,10.5s-9.5-17.9-8.4-27.1c2-16.7,3.4-33.4,3.9-50.1,0-.9.7-1.5,1.6-1.5h14c5.1,0,9.7-3.7,10.2-8.7.6-5.8-4-10.7-9.7-10.7h-14.4c-.9,0-1.6-.7-1.6-1.6,0-5.1-.3-10.2-.6-15.4-.7-11.9-19.4-12-18.7,0,.3,5.1.5,10.2.6,15.3,0,.9-.7,1.6-1.6,1.6h-12.3c-5.1,0-9.7,3.7-10.2,8.7-.6,5.8,4,10.7,9.7,10.7h12.8c.9,0,1.6.7,1.6,1.6-.2,6.4-.4,11.5-.9,17.9,0,1.1-.6,2-1.4,2.6-1.5.9-4,.6-7.2.9-4.8.4-8.2,1.4-11.7,3.4-13.3,7.6-18.2,26.7-11.2,40.1,5.4,10.4,17.7,15.7,29,14.1,1.3-.2,2.5.5,3.1,1.6,5.3,9.9,15.2,16.7,27.3,17.2,15.2.7,29.4-11.4,31.6-26.3.7-5-1.2-10-6.5-11.5v.2ZM129.1,179c-.5,2.1-1.5,4-3.2,5.4-3,2.4-7.8,2.2-10.6-.5-2.4-2.3-3.2-6-2.6-9.3.4-2.5,1.5-5,3.4-6.7,3.5-3.2,9.3-3,11.8,1.2,1,1.7,1.5,3.6,1.6,5.6,0,1.4,0,2.9-.4,4.3h0Z"/>
+              <path d="M297.9,146.9c1.8,3.8,3.9,8,7.8,9.6,4,1.6,9.1-.6,10.7-4.6,1.7-4.4-.3-9.2-2-13.6-1.2-3.2-3-6.9-4.7-10.3-1.9-3.6-4.7-8.3-9-9s-8.1,1-9,5.4c-1.3,6.3,2.6,14.8,6.3,22.5h0Z"/>
+              <path fill-rule="evenodd" d="M309.6,187.8c-.3-5.7-4.6-9.6-9.4-9.7-4.9,0-9.3,3.1-9.3,9.7s-1.3,13.5-7.7,16.5c-3.7,1.8-8.9,1.5-12.7,0-12.2-5-10.3-20.9-10.5-32.3l-.8-59.3c0-1.1.8-1.9,1.9-1.9h10.8c5.1,0,9.7-3.7,10.2-8.7.6-5.8-4-10.7-9.7-10.7h-11.6c-1,0-1.9-.8-1.9-1.9v-12.9c0-4.9-3.5-9.4-8.4-9.8-5.6-.6-10.3,3.9-10.3,9.3v13.4c0,1-.8,1.9-1.8,1.9h-14.4c-5.1,0-9.7,3.7-10.2,8.7-.6,5.8,4,10.7,9.7,10.7h15.2c1,0,1.9.8,1.9,1.9,0,3.2,0,6.4.1,9.5,0,1.2-1,2.1-2.3,2-5.2-.5-10.6.6-15.1,3-8.4,4.6-14.1,13.5-15.5,23-1.7,11.5,3.1,24,12.6,30.8,5.5,3.9,12.5,5.6,19.2,4.9,1.1-.1,2.1.7,2.2,1.8.2,2.1.4,4.1.8,6.2,2.9,17.5,18.3,31.8,36.6,30.4,19.1-1.5,31.5-18,30.3-36.5h.1ZM235.5,165.8c-3.7.2-7.1-1.6-8.7-4.9-1.6-3.3-1.5-7.3-.2-10.8,1-2.7,3.3-5.2,5.9-6.2,3-1.2,6.9-.7,9.4,2,2.9,3.1,3.7,8.3,2.6,12.6-1.4,5.2-5.4,7.1-8.9,7.3h-.1Z"/>
+              <path d="M173.7,158.5s-4.3-8.8-2-14.8c1.1-2.8,3.6-4.5,6.3-4.8,3.4-.4,6.4.7,8.9,4.1,3.9,5.4,8.8,16.2,6.8,23-.9,3-2.7,5.2-5.6,5.9-3.4.9-6.8-.3-9-2.9-2.1-2.3-4.4-8.2-5.4-10.6h0Z"/>
+              <path d="M22.5,9.9c-1.2,2.9-2.6,6-4.3,8.9v32.2h-5.2v-24.3c-1.2,1.6-2.5,3-3.8,4.3-.5-1.3-1.9-4.3-2.9-5.6,4.4-4.1,8.6-10.7,11.1-17.2l5.1,1.7ZM50.3,44.5v5.2h-29.7v-5.2h12.2v-9.2h-9.7v-5.2h9.7v-8h-11.2v-5.2h13.1c-2.3-1.7-5.2-3.7-7.7-5.1l3.6-3.9c3.4,1.8,8.1,4.6,10.4,6.7l-2,2.3h10.5v5.2h-11.2v8h9.9v5.2h-9.9v9.2h11.9Z"/>
+              <path d="M69.2,12.5c2.6,0,7.5-.2,9.7-.4,1.1,0,2.3-.3,3.1-.6l3.7,2.9c-.6.7-1.2,1.3-1.6,1.9-1.2,2-2.9,6-4.6,9.9,3.6.6,7,1.7,10,2.9,0-.6,0-1.1.1-1.6.1-1.8.1-3.6,0-5l6,.7c-.2,3.1-.4,5.9-.9,8.5,1.9,1.1,3.6,2.2,4.9,3.1l-2.7,6.4c-1.2-1.1-2.5-2.2-4-3.2-2,5.2-5.5,9.2-11.7,12.5l-4.9-4c6.9-3,10.2-7.4,11.7-11.5-3.3-1.8-6.9-3.2-10.9-3.7-1.7,3.9-3.6,8.5-5.2,11-1.8,2.8-4,4-7.2,4s-7.1-2.8-7.1-7.5c0-7.1,6.5-12.6,15.7-13,1.3-3,2.6-6.2,3.7-8.3-1.8,0-5.8.2-7.9.4-.9,0-2.5.2-3.7.4l-.2-5.9c1.2.1,2.8.2,3.8.2ZM65.1,40.2c.9,0,1.6-.5,2.4-1.6,1.2-1.7,2.4-4.6,3.7-7.5-5.2.8-8.1,3.9-8.1,6.8s.9,2.3,1.9,2.3Z"/>
+              <path d="M141.7,22.8c1.9,2.6,4.5,4.8,7.6,6-1.2,1-2.7,2.9-3.5,4.1-3.5-1.7-6.3-4.7-8.3-8.2-1.4,2.3-3.5,4.6-6.7,6.4h11.9v19.8h-5.6v-1.3h-19.9v1.5h-5.3v-19.5c-.8.6-1.7,1.1-2.5,1.6-.7-1.1-2.4-2.8-3.6-3.7,3.9-1.9,6.2-4.3,7.4-6.7h-6.4v-4.3h7.8c.1-.9.2-1.8.2-2.6h-6.5v-4.1h6.5v-3.6h5.2v3.6h5.5v4.1h-5.5c0,.9,0,1.7-.2,2.6h6.3v4.3h-6.1c2,1.5,4.4,3.2,5.7,4.3l-3.5,3.7c-1.2-1.1-3.2-2.9-5.2-4.4-1.1,1.7-2.5,3.3-4.5,4.7h16c-.8-1.1-1.9-2.3-2.9-2.9,3.7-1.4,5.8-3.3,7-5.4h-5.2v-4.3h6.8c.1-.9.2-1.7.2-2.5h0c0-.1-6.3-.1-6.3-.1v-4.1h6.3v-3.6h5.2v3.6h6.9v4.1h-6.9v.2c0,.8,0,1.6-.1,2.4h8.6v4.3h-6.4ZM137.2,35.7h-19.9v2.6h19.9v-2.6ZM137.2,45.1v-2.9h-19.9v2.9h19.9Z"/>
+              <path d="M183.8,26.7c-2.1,1.8-6.4,5.8-7.5,6.9.4,0,1.2.1,1.7.3,1.3.4,2.2,1.4,2.8,3.1.4,1.2.9,3,1.3,4.2.4,1.4,1.4,2.2,3.2,2.2,3.5,0,6.7-.4,9-.8l-.4,6c-1.9.4-6.6.7-9,.7-4.4,0-6.7-1-7.9-4-.5-1.4-1-3.5-1.3-4.7-.5-1.6-1.5-2.2-2.4-2.2s-1.9.7-3,1.8c-1.6,1.6-5,5.4-8.2,9.4l-5.4-3.8c.8-.7,1.9-1.7,3.2-2.9,2.3-2.4,11.8-11.8,16-16.2-3.2,0-8.7.6-11.4.8-1.6.1-3,.4-4,.5l-.6-6.3c1.1,0,2.7.2,4.4.1,2.2,0,12.6-.5,16.4-1,.9,0,2.1-.3,2.6-.5l3.4,3.8c-1.2.8-2.2,1.7-3,2.3ZM185.2,12l-.7,5.4c-4.8-.4-13.4-1.4-18.9-2.3l.9-5.3c5.2,1,14,1.9,18.8,2.3Z"/>
+              <path d="M219.5,16.3c2.3-.4,4.4-.9,6.2-1.5l.2,5.3c-2.1.6-5,1.2-8.1,1.6-2.2,6.4-6.1,14.5-9.8,19.7l-5.6-2.9c3.6-4.5,7.4-11.3,9.4-16.2-.8,0-1.6,0-2.4,0-1.9,0-3.8,0-5.8-.2l-.4-5.3c2,.2,4.4.3,6.1.3s2.8,0,4.2-.2c.6-2.5,1.2-5.3,1.2-7.7l6.3.6c-.4,1.5-1,3.8-1.7,6.3ZM232,30.2c0,1.3.2,3.5.3,5.8,4,1.5,7.2,3.8,9.5,5.9l-3.1,4.9c-1.6-1.5-3.7-3.4-6.2-4.9v.5c0,4.3-2.3,7.6-8.9,7.6s-10.2-2.5-10.2-7.6,3.8-8,10.2-8,2.1,0,3.2.2c-.2-3.4-.4-7.5-.5-10.3h5.8c-.1,1.9,0,3.9,0,5.9ZM222.8,44.7c3.2,0,4.1-1.7,4.1-4.3v-.9c-1.2-.3-2.4-.5-3.7-.5-2.7,0-4.4,1.2-4.4,2.8s1.4,2.9,4,2.9ZM228.8,20.3l2.9-4.6c3.3,1.4,9,4.6,11.4,6.3l-3.3,4.8c-2.7-2.1-7.9-5.1-11-6.5Z"/>
+              <path d="M260,30.1c4.2-3,8.7-4.4,13.6-4.4,8.1,0,12.7,5,12.7,10.5,0,8.4-6.6,14.8-25.8,13.2l-1.7-6c13.8,1.9,21.1-1.5,21.1-7.3s-2.9-5.2-6.9-5.2-9.9,1.9-12.8,5.4c-.8,1-1.3,1.7-1.7,2.7l-5.3-1.3c.9-4.5,2-13.5,2.3-19.2l6.2.9c-.6,2.5-1.4,8.1-1.7,10.8ZM279.8,13.6l-1.4,5.6c-4.6-.6-14.9-2.8-18.5-3.7l1.5-5.5c4.4,1.4,14.4,3.1,18.4,3.6Z"/>
+            </g>
+            <path class="fst0mn" d="M390.4,68.9c-6.7-14.7-21.5-23.2-36.3-23.3-14.8,0-29.6,8.6-36.3,23.3-6,13.2-4.4,29.1,1.9,42.1,4.3,8.9,10.5,16.6,16.1,24.7,5.1,7.3,11.6,15.1,16.1,23.1.9,1.6,3.3,1.6,4.2,0,4.5-8,11.1-15.8,16.1-23.1,5.6-8.1,11.8-15.8,16.1-24.7,6.3-13.1,7.9-28.9,1.9-42.1h.2ZM354.2,106c-10.8,0-19.5-8.7-19.5-19.5s8.7-19.5,19.5-19.5,19.5,8.7,19.5,19.5-8.7,19.5-19.5,19.5Z"/>
+          </svg>
+        </a>
+      <nav class="footer-nav-flat">
+        <a href="#top">トップ</a>
+        <a href="#overview">イベント概要</a>
+        <a href="#schedule">スケジュール</a>
+        <a href="#properties">見学物件</a>
+        <a href="#experience">体験できること</a>
+        <a href="#foryou">こんな方に</a>
+        <a href="#gallery">ギャラリー</a>
+        <a href="#details">参加概要</a>
+        <a href="#apply">応募する</a>
+        <a href="#faq">よくある質問</a>
+      </nav>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;">
+        <div class="footer-legal">
+          <a href="https://www.succeed-inc.co.jp/" target="_blank" rel="noopener">運営会社：株式会社サクシード（長谷工グループ）</a>
+          <a href="https://www.succeed-inc.co.jp/external-transmission/" target="_blank" rel="noopener">利用者情報の外部送信について</a>
+          <a href="https://sumumu.life/socialmedia" target="_blank" rel="noopener">ソーシャルメディアガイドライン</a>
+          <a href="https://www.succeed-inc.co.jp/privacy/" target="_blank" rel="noopener">個人情報保護方針</a>
+          <a href="https://sumumu.life/terms" target="_blank" rel="noopener">運営会社・サイト利用について</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Date display ─────────────────────────────
+(function(){
+})();
+
+// ── Hero slideshow ───────────────────────────
+(function(){
+  var imgs = document.querySelectorAll('#heroSlideshow img');
+  var dots = document.querySelectorAll('#heroSlideshow .hero-slide-dots span');
+  var nameEl = document.getElementById('heroSlideName');
+  var names = ['シャリエ大津膳所', 'シエリアシティ大津におの浜'];
+  if(!imgs.length) return;
+  var idx = 0;
+  setInterval(function(){
+    imgs[idx].classList.remove('active');
+    dots[idx].classList.remove('active');
+    idx = (idx + 1) % imgs.length;
+    imgs[idx].classList.add('active');
+    dots[idx].classList.add('active');
+    if(nameEl) nameEl.textContent = names[idx];
+  }, 4000);
+})();
+
+// ── Hamburger ────────────────────────────────
+var hamb = document.getElementById('hamb');
+var mobNav = document.getElementById('mobNav');
+if(hamb && mobNav){
+  hamb.addEventListener('click', function(){
+    mobNav.classList.toggle('open');
+    hamb.classList.toggle('open');
+  });
+  mobNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobNav.classList.remove('open');
+      hamb.classList.remove('open');
+    });
+  });
+}
+
+// ── Scroll fade-in ───────────────────────────
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.08});
+document.querySelectorAll('.fade').forEach(function(el){ obs.observe(el); });
+
+// ── Active nav on scroll ─────────────────────
+(function(){
+  var sections = ['top','overview','schedule','properties','experience','foryou','gallery','details','apply','faq'];
+  var links = {};
+  sections.forEach(function(id){
+    links[id] = document.querySelector('.hd-nav a[href="#'+id+'"]');
+  });
+  function update(){
+    var hh = 80;
+    var cur = 'top';
+    sections.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && el.getBoundingClientRect().top <= hh) cur = id;
+    });
+    sections.forEach(function(id){
+      if(links[id]) links[id].classList.toggle('active', id === cur);
+    });
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  update();
+})();
+
+// ── Fixed mobile CTA ─────────────────────────
+(function(){
+  var cta = document.getElementById('fixedCta');
+  var hero = document.querySelector('.hero');
+  if(!cta || !hero) return;
+  function check(){
+    var r = hero.getBoundingClientRect();
+    cta.style.display = r.bottom < 0 ? 'block' : 'none';
+  }
+  window.addEventListener('scroll', check, {passive:true});
+  check();
+})();
+</script>
+</body>
+</html>
